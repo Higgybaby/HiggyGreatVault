@@ -1,0 +1,12 @@
+GarrisonLandingPage_Toggle = function()
+    if GarrisonLandingPage and GarrisonLandingPage:IsShown() then
+        HideUIPanel(GarrisonLandingPage)
+    else
+        if IsShiftKeyDown() then
+            LoadAddOn("Blizzard_WeeklyRewards")
+            WeeklyRewardsFrame:Show()
+        else
+            ShowGarrisonLandingPage(Enum.GarrisonType.Type_9_0)
+        end
+    end
+end
